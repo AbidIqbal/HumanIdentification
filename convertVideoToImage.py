@@ -3,11 +3,11 @@ import numpy as np
 
 
 # Initiate video capture for video file
-cap = cv2.VideoCapture('videos/c2.mp4')
+cap = cv2.VideoCapture('newData/8.mp4')
 
 # Loop once video is successfully loaded
 pic_num=1
-storage_path = 'videos/cat'
+storage_path = 'newData/bg2'
 while cap.isOpened():
     # Read first frame
     print 'Reading'

@@ -26,8 +26,8 @@ def store_raw_images():
 
 
 def resize_grayscale_image():
-    image_path='videos/pics'
-    storage_path='videos/resized'
+    image_path='newData/1'
+    storage_path='latestTraining/positive/rawdata'
     pic_num = 1
     for img in os.listdir(image_path):
         try:
@@ -35,7 +35,8 @@ def resize_grayscale_image():
             current_image_path = str(image_path) + '/' + str(img)
             print current_image_path
             checkImage = cv2.imread(current_image_path,cv2.IMREAD_GRAYSCALE)
-            resized_image=cv2.resize(checkImage,(400,400))
+            # checkImage = cv2.imread(current_image_path)
+            resized_image=cv2.resize(checkImage,(700,700))
             cv2.imwrite(str(storage_path)+'/'+str(pic_num)+'.bmp',resized_image)
 
 
